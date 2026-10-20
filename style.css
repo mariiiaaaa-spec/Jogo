@@ -1,0 +1,211 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --bg: #0b1020;
+    --card: #151d33;
+    --card-light: #1d2945;
+    --text: #f4f7ff;
+    --muted: #aab6d3;
+    --accent: #7c5cff;
+    --correct: #35d39a;
+    --wrong: #ff6b81;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 32px 16px;
+    display: grid;
+    place-items: center;
+    background: radial-gradient(circle at top, #202b50, var(--bg) 55%);
+    color: var(--text);
+    font-family: Inter, Arial, sans-serif;
+}
+
+.container {
+    width: min(100%, 680px);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 7px 12px;
+    border: 1px solid #50438e;
+    border-radius: 999px;
+    color: #a99aff;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+h1 {
+    margin: 14px 0 8px;
+    font-size: clamp(30px, 6vw, 44px);
+}
+
+header p,
+.footer {
+    color: var(--muted);
+}
+
+header p {
+    line-height: 1.6;
+}
+
+.status {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.status-card {
+    padding: 15px 18px;
+    background: var(--card);
+    border: 1px solid #293653;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.status-card span {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.status-card strong {
+    font-size: 22px;
+}
+
+.game-card {
+    padding: clamp(20px, 5vw, 32px);
+    background: var(--card);
+    border: 1px solid #293653;
+    border-radius: 22px;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.25);
+}
+
+.progress-track {
+    height: 7px;
+    background: #293653;
+    border-radius: 99px;
+    overflow: hidden;
+    margin-bottom: 26px;
+}
+
+.progress {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, var(--accent), #43c8ff);
+    transition: width 0.25s ease;
+}
+
+h2 {
+    font-size: clamp(19px, 4vw, 24px);
+    line-height: 1.45;
+    margin: 0 0 22px;
+}
+
+.options {
+    display: grid;
+    gap: 11px;
+}
+
+.option-button {
+    width: 100%;
+    text-align: left;
+    color: var(--text);
+    background: var(--card-light);
+    border: 1px solid #344363;
+    border-radius: 12px;
+    padding: 15px 17px;
+    font: inherit;
+    cursor: pointer;
+    transition: transform 0.15s, border-color 0.15s;
+}
+
+.option-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    border-color: #a99aff;
+}
+
+.option-button:disabled {
+    cursor: default;
+    opacity: 0.95;
+}
+
+.option-button.correct {
+    border-color: var(--correct);
+    background: rgba(53, 211, 154, 0.13);
+}
+
+.option-button.wrong {
+    border-color: var(--wrong);
+    background: rgba(255, 107, 129, 0.12);
+}
+
+.feedback {
+    min-height: 24px;
+    margin: 18px 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.feedback.correct-text {
+    color: var(--correct);
+}
+
+.feedback.wrong-text {
+    color: var(--wrong);
+}
+
+.primary-button {
+    width: 100%;
+    border: 0;
+    border-radius: 12px;
+    padding: 15px;
+    color: white;
+    background: var(--accent);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.primary-button:hover:not(:disabled) {
+    background: #6847f5;
+    transform: translateY(-1px);
+}
+
+.primary-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.45;
+}
+
+.footer {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 22px;
+}
+
+@media (max-width: 420px) {
+    body {
+        padding: 22px 12px;
+    }
+
+    .status-card {
+        padding: 13px;
+    }
+}

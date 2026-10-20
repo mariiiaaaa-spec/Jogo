@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio da Lógica</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <header>
+            <span class="tag">JOGO DE RACIOCÍNIO</span>
+            <h1>Desafio da Lógica</h1>
+            <p>Resolva as perguntas e teste sua lógica!</p>
+        </header>
+
+        <section class="status">
+            <div class="status-card">
+                <span>Pontuação</span>
+                <strong id="pontuacao">0</strong>
+            </div>
+
+            <div class="status-card">
+                <span>Pergunta</span>
+                <strong>
+                    <span id="numeroPergunta">1</span>/<span id="totalPerguntas">5</span>
+                </strong>
+            </div>
+        </section>
+
+        <section class="game-card">
+            <div class="progress-track">
+                <div id="progresso" class="progress"></div>
+            </div>
+
+            <h2 id="pergunta">Carregando pergunta...</h2>
+
+            <div id="opcoes" class="options"></div>
+
+            <p id="feedback" class="feedback">
+                Escolha uma resposta para continuar.
+            </p>
+
+            <button id="botaoContinuar" class="primary-button" disabled>
+                Próxima pergunta
+            </button>
+        </section>
+
+        <p class="footer">
+            Feito com HTML, CSS, JavaScript e apoio de IA.
+        </p>
+    </main>
+</body>
+</html>
